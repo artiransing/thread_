@@ -1,0 +1,22 @@
+import java.io.*;
+class ThreadNaming extends Thread {
+    ThreadNaming(String name)
+    {
+        super(name);
+    }
+    @Override public void run()
+    {
+        System.out.println("Thread is running.....");
+    }
+}
+class AC {
+    public static void main(String[] args)
+    {
+     ThreadNaming t1 = new ThreadNaming("conduira");
+       
+        System.out.println("Thread 1: " + t1.getName());
+       
+        t1.start();
+       
+    }
+}
